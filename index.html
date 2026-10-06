@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sonrisa Imperial · Clínica Dental</title>
-<meta name="description" content="Clínica dental Sonrisa Imperial. Agenda tu cita en línea en menos de un minuto.">
+<meta name="description" content="Clínica dental Sonrisa Imperial en Vitacura, Santiago. Primera consulta $10.000. Solicita tu hora en línea.">
+<meta name="theme-color" content="#0f1b33">
+<meta property="og:title" content="Sonrisa Imperial · Clínica Dental">
+<meta property="og:description" content="Clínica dental en Vitacura. Solicita tu hora en línea.">
+<meta property="og:image" content="clinica-dental.jpg">
 <style>
   /* Layout: una sola columna centrada — hero, confianza, servicios y formulario de cita */
   :root {
@@ -182,6 +186,8 @@
 
   /* ---- Contacto / pie ---- */
   .contact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; }
+  .card .price { color: var(--gold); font-weight: 600; margin-top: 8px; }
+  .contact a { color: inherit; text-decoration: none; }
   .contact h3 { font-size: 1.05rem; margin-bottom: 6px; font-family: var(--body); font-weight: 600; }
   .contact .data { color: var(--gold); font-weight: 600; user-select: all; }
   .contact p { color: var(--muted); margin: 2px 0; font-size: .95rem; }
@@ -215,7 +221,7 @@
       <div>
         <span class="eyebrow">Odontología de excelencia</span>
         <h1>Tu mejor sonrisa, tratada como realeza</h1>
-        <p>Atención dental cercana y profesional. Reserva tu cita en menos de un minuto y nuestro equipo te confirmará el horario.</p>
+        <p>Atención dental cercana y profesional. Solicita tu hora en línea y te confirmamos el horario.</p>
         <div class="hero-actions">
           <a href="#cita" class="btn btn-gold">Agendar mi cita</a>
           <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
@@ -228,41 +234,29 @@
     </section>
 
     <div class="trust">
-      <div><div class="num">+15</div><div class="lbl">años de experiencia</div></div>
-      <div><div class="num">+8.000</div><div class="lbl">sonrisas atendidas</div></div>
-      <div><div class="num">4,9&#9733;</div><div class="lbl">valoración de pacientes</div></div>
+      <div><div class="num">$10.000</div><div class="lbl">primera consulta</div></div>
+      <div><div class="num">Lun a Sáb</div><div class="lbl">atención con hora agendada</div></div>
+      <div><div class="num">Vitacura</div><div class="lbl">Luis Pasteur 2450</div></div>
     </div>
-
     <section class="block" id="servicios">
       <div class="section-head">
         <h2>Nuestros servicios</h2>
         <p>Todo lo que tu sonrisa necesita, en un solo lugar.</p>
       </div>
       <div class="services">
-        <div class="card">
-          <div class="ico" aria-hidden="true">🦷</div>
-          <h3>Odontología general</h3>
-          <p>Limpiezas, empastes y revisiones para mantener tu boca sana.</p>
-        </div>
-        <div class="card">
-          <div class="ico" aria-hidden="true">✨</div>
-          <h3>Estética dental</h3>
-          <p>Blanqueamiento y carillas para una sonrisa luminosa.</p>
-        </div>
-        <div class="card">
-          <div class="ico" aria-hidden="true">😁</div>
-          <h3>Ortodoncia</h3>
-          <p>Brackets y alineadores invisibles adaptados a ti.</p>
-        </div>
+        <div class="card"><div class="ico" aria-hidden="true">🦷</div><h3>Primera consulta</h3><p>Revisión y diagnóstico.</p><p class="price">$10.000</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🪥</div><h3>Limpieza</h3><p>Limpieza dental profesional.</p><p class="price">$25.000</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🛠️</div><h3>Tapadura</h3><p>Reparación de caries.</p><p class="price">$25.000</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">✨</div><h3>Blanqueamiento</h3><p>Para una sonrisa más luminosa.</p><p class="price">$30.000</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🚑</div><h3>Urgencia</h3><p>Dolor o problema que no puede esperar.</p><p class="price">$30.000</p></div>
       </div>
     </section>
-
     <section class="block" id="cita">
       <div class="appointment">
         <div class="section-head">
           <span class="eyebrow">Reserva en línea</span>
           <h2>Agenda tu cita</h2>
-          <p>Déjanos tus datos y te confirmaremos el horario por teléfono o correo.</p>
+          <p>Completa tus datos y te confirmamos el horario por WhatsApp.</p>
         </div>
 
         <form id="form-cita" novalidate>
@@ -273,7 +267,7 @@
           <div class="row2">
             <div class="field">
               <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="600 000 000">
+              <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="9 1234 5678">
             </div>
             <div class="field">
               <label for="email">Correo electrónico</label>
@@ -288,11 +282,11 @@
             <div class="field">
               <label for="servicio">Motivo de la cita</label>
               <select id="servicio" name="servicio">
-                <option>Revisión general</option>
-                <option>Limpieza dental</option>
-                <option>Estética / blanqueamiento</option>
-                <option>Ortodoncia</option>
-                <option>Urgencia / dolor</option>
+                <option>Primera consulta</option>
+                <option>Limpieza</option>
+                <option>Tapadura</option>
+                <option>Blanqueamiento</option>
+                <option>Urgencia</option>
                 <option>Otro</option>
               </select>
             </div>
@@ -301,14 +295,15 @@
             <label for="mensaje">Comentarios (opcional)</label>
             <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos brevemente qué necesitas"></textarea>
           </div>
-          <button type="submit" class="btn btn-gold">Solicitar cita</button>
-          <p class="note">Te responderemos en menos de 24 horas laborables.</p>
+          <button type="submit" class="btn btn-gold">Continuar</button>
+          <p class="note">Al continuar se abre WhatsApp con tu solicitud ya escrita.</p>
         </form>
 
         <div class="success" id="exito" hidden>
-          <h3>¡Solicitud recibida! &#9812;</h3>
-          <p id="exito-msg">Gracias, nos pondremos en contacto contigo muy pronto.</p>
-          <p class="note" style="color:var(--muted)">Si prefieres, también puedes llamarnos al <b>900 123 456</b>.</p>
+          <h3>Un último paso &#9812;</h3>
+          <p id="exito-msg">Tu solicitud aún no se ha enviado.</p>
+          <p><a class="btn btn-gold" id="exito-wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a></p>
+          <p class="note" style="color:var(--muted)">También puedes llamarnos al <b>+56 9 8299 8674</b>.</p>
         </div>
       </div>
     </section>
@@ -316,19 +311,22 @@
     <section class="block">
       <div class="contact">
         <div>
-          <h3>Teléfono</h3>
-          <p class="data">900 123 456</p>
-          <p>Lun a Vie · 9:00–20:00</p>
+          <h3>Teléfono / WhatsApp</h3>
+          <p class="data"><a href="tel:+56982998674">+56 9 8299 8674</a></p>
+          <p>Lun a Jue · 10:00–16:00</p>
+          <p>Vie · 10:00–14:00</p>
+          <p>Sáb · 11:00–14:00</p>
+          <p>Domingo y festivos cerrado</p>
         </div>
         <div>
           <h3>Correo</h3>
-          <p class="data">citas@sonrisaimperial.es</p>
-          <p>Respuesta en 24 h</p>
+          <p class="data"><a href="mailto:mscabrer@gmail.com">mscabrer@gmail.com</a></p>
         </div>
         <div>
           <h3>Dirección</h3>
-          <p class="data">Av. del Reino 12</p>
-          <p>28010 Madrid</p>
+          <p class="data">Luis Pasteur 2450</p>
+          <p>Vitacura, Santiago</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Luis+Pasteur+2450+Vitacura+Santiago" target="_blank" rel="noopener">Ver en Google Maps</a></p>
         </div>
       </div>
     </section>
@@ -360,8 +358,19 @@
       }
       var nombre = document.getElementById('nombre').value.trim();
       var primerNombre = nombre.split(' ')[0] || '';
+      var tel = document.getElementById('telefono').value.trim();
+      var mail = document.getElementById('email').value.trim();
+      var f = document.getElementById('fecha').value.split('-').reverse().join('-');
+      var serv = document.getElementById('servicio').value;
+      var com = document.getElementById('mensaje').value.trim();
+      var texto = 'Hola, quiero solicitar una hora en Sonrisa Imperial.' +
+        '\nNombre: ' + nombre + '\nTeléfono: ' + tel +
+        (mail ? '\nCorreo: ' + mail : '') +
+        '\nFecha preferida: ' + f + '\nMotivo: ' + serv +
+        (com ? '\nComentarios: ' + com : '');
+      document.getElementById('exito-wa').href = 'https://wa.me/56982998674?text=' + encodeURIComponent(texto);
       msg.textContent = (primerNombre ? primerNombre + ', ' : '') +
-        'hemos recibido tu solicitud. Te confirmaremos el horario muy pronto.';
+        'pulsa el botón para enviar tu solicitud por WhatsApp. Te confirmamos el horario por ahí.';
       form.hidden = true;
       exito.hidden = false;
       exito.scrollIntoView({ behavior: 'smooth', block: 'center' });
