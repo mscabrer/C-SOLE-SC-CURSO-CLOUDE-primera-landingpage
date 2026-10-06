@@ -255,8 +255,8 @@
       <div class="appointment">
         <div class="section-head">
           <span class="eyebrow">Reserva en línea</span>
-          <h2>¿Cuándo vienes?</h2>
-          <p>Completa tus datos y te confirmamos el horario por WhatsApp.</p>
+          <h2>Reserva tu hora</h2>
+          <p>Déjanos tus datos y te escribimos por WhatsApp para confirmar tu hora. Es rápido y sin compromiso.</p>
         </div>
 
         <form id="form-cita" novalidate>
@@ -293,15 +293,15 @@
           </div>
           <div class="field">
             <label for="mensaje">Comentarios (opcional)</label>
-            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos brevemente qué necesitas"></textarea>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Te duele algo o tienes alguna duda? Cuéntanos aquí"></textarea>
           </div>
-          <button type="submit" class="btn btn-gold">Continuar</button>
-          <p class="note">Al continuar se abre WhatsApp con tu solicitud ya escrita.</p>
+          <button type="submit" class="btn btn-gold">Quiero mi hora</button>
+          <p class="note">Se abrirá WhatsApp con tu mensaje listo, solo tienes que enviarlo.</p>
         </form>
 
         <div class="success" id="exito" hidden>
-          <h3>Un último paso &#9812;</h3>
-          <p id="exito-msg">Tu solicitud aún no se ha enviado.</p>
+          <h3>¡Ya casi! &#9812;</h3>
+          <p id="exito-msg">Solo falta que envíes tu mensaje por WhatsApp para confirmar tu hora.</p>
           <p><a class="btn btn-gold" id="exito-wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a></p>
           <p class="note" style="color:var(--muted)">También puedes llamarnos al <b>+56 9 8299 8674</b>.</p>
         </div>
@@ -369,8 +369,8 @@
         '\nFecha preferida: ' + f + '\nMotivo: ' + serv +
         (com ? '\nComentarios: ' + com : '');
       document.getElementById('exito-wa').href = 'https://wa.me/56982998674?text=' + encodeURIComponent(texto);
-      msg.textContent = (primerNombre ? primerNombre + ', ' : '') +
-        'pulsa el botón para enviar tu solicitud por WhatsApp. Te confirmamos el horario por ahí.';
+      msg.textContent = primerNombre ? primerNombre + ', ' + 'solo falta que envíes tu mensaje por WhatsApp para confirmar tu hora.' :
+        'Solo falta que envíes tu mensaje por WhatsApp para confirmar tu hora.';
       form.hidden = true;
       exito.hidden = false;
       exito.scrollIntoView({ behavior: 'smooth', block: 'center' });
